@@ -1,6 +1,39 @@
-import { createApp } from 'vue'
-import App from './App.vue'
+import { App, createApp } from "vue";
+import DoggyWidgetApp from "./App.vue";
 
-import './assets/main.css'
+interface DoggyWidgetOptions {
+  container: HTMLElement;
+}
 
-createApp(App).mount('#app')
+(() => {
+  class DoggyWidget {
+    private app: App;
+    private container: HTMLElement;
+    private containerId: string;
+
+    constructor({ container }: DoggyWidgetOptions) {
+      this.container = container;
+      this.containerId = container.id;
+
+      this.app = createApp(DoggyWidgetApp, {
+        config: {
+          containerId: this.containerId,
+          container,
+        },
+      });
+
+      this.app.mount("#" + this.containerId);
+    }
+
+    destroy() {
+      this.app.unmount();
+      this.container.innerHTML = "";
+    }
+  }
+
+  (window as any).DoggyWidget = {
+    init(config) {
+      return new DoggyWidget(config);
+    },
+  };
+})();
