@@ -1,13 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8">
-    <link rel="icon" href="/favicon.ico">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <link rel="icon" href="/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vite App</title>
+    <style>
+      #widget1 {
+        width: 640px;
+        height: 480px;
+      }
+
+      #widget2 {
+        width: 50px;
+        height: 50px;
+      }
+      #widget3 {
+        width: 150px;
+        height: 150px;
+      }
+
+      .doggy-widget {
+        position: relative;
+
+        border: 5px dashed green;
+      }
+    </style>
   </head>
   <body>
     <div id="app"></div>
+    <div id="widget1"></div>
+    <div id="widget2"></div>
+    <div id="widget3"></div>
     <script type="module" src="/src/main.ts"></script>
   </body>
 </html>
