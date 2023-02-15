@@ -3101,6 +3101,11 @@ validate-npm-package-license@^3.0.1:
     spdx-correct "^3.0.0"
     spdx-expression-parse "^3.0.0"
 
+vite-plugin-css-injected-by-js@^3.0.0:
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/vite-plugin-css-injected-by-js/-/vite-plugin-css-injected-by-js-3.0.0.tgz#9a45f628c5225a636281ac14ad90dea1f7aba4e1"
+  integrity sha512-gJxLYkD0rLxGnqBHkFm0bUlYq9VWRT0Fr6lHYD3uRzgW5IGMSdLbNDapXUV57SSlYpvZUrXSlne1Y89BWF1Mgw==
+
 vite@^4.0.0:
   version "4.1.1"
   resolved "https://registry.yarnpkg.com/vite/-/vite-4.1.1.tgz#3b18b81a4e85ce3df5cbdbf4c687d93ebf402e6b"
